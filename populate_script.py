@@ -10,7 +10,7 @@ from clientes.models import Cliente
 
 def criando_pessoas(quantidade_de_pessoas):
     fake = Faker('pt_BR')
-    Faker.seed(10) # vai gerar sempre a mesma sequencia de nomes
+    Faker.seed(10)
     for _ in range(quantidade_de_pessoas):
         cpf = CPF()
         nome = fake.name()
@@ -24,4 +24,3 @@ def criando_pessoas(quantidade_de_pessoas):
         p.save()
 
 criando_pessoas(50)
-print('Sucesso!')
